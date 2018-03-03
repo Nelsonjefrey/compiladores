@@ -1,0 +1,14 @@
+import ply.lex as lex
+
+class Palabras_Reservada():
+	def __init__(self):
+
+	def lenguaje(self):
+		#lista-de-palabras-reservadas
+		lenguaje = (
+			'M_','S_','SN_','E_','L_','P','*P','*N',
+			)
+
+
+		
+

@@ -1,4 +1,4 @@
 from Manejador_Archivos	import Manejador_archivo
-
-a = Manejador_archivo("texto.txt")
+archivo = input("ingrese nombre del Archivo: ")
+a = Manejador_archivo(archivo)
 a.leer()

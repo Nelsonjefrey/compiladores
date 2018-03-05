@@ -16,4 +16,4 @@ class analisis_lexico():
 				if re.match("esta",palabra):
 					print("hay coincidencia")
 				else:
-					print("que miras cv?")
+					print("que miras")

@@ -1,20 +1,17 @@
 class Manejador_archivo():
 	def __init__(self, archivo):
-		self.archivo=archivo
+		global f
+		self.archivo = archivo
+		f = open(self.archivo + ".gh","rt")	
 
-
-	def leer(self):
-		l = open(self.archivo + ".gh" , "r+")
-		contenido=l.read()
-		print(contenido)
-		l.close()	
-
-	def escribir(self):
-		f = open(self.archivo + ".gh","w")
-		f.write()
-		nuevo_arcivo=f.read()
-		print("Archivo Editado" , nuevo_arcivo)
+	def leer_lineas(self):
+		linea = f.readline()
+		return linea
+		
+	def lineas_archivo(self):
+		fi = open(self.archivo + ".gh","rt")
+		lineas = len(fi.readlines())
+		fi.close()	
+		return lineas
+	def cerrar_archivo():
 		f.close()
-
-
-

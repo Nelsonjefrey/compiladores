@@ -8,7 +8,7 @@ class Lexer():
         global resultado_lexema
         resultado_lexema = []
 
-    def prueba(self, data):
+    def prueba(self, data,linea):
 
         analizador = m.lex()
         analizador.input(data)
@@ -20,14 +20,16 @@ class Lexer():
             if not tok:
                 break
             # print("lexema de "+tok.type+" valor "+tok.value+" linea "tok.lineno)
-            estado = "Linea {:4} Tipo {:15} Lexema {:15}".format(
-                str(tok.lineno), str(tok.type), str(tok.value))
+            estado = "Linea:{:2} Tipo:{:15} Lexema:{:15}".format(linea,
+                 str(tok.type), str(tok.value))
             resultado_lexema.append(estado)
+            #str(tok.lineno),
         return resultado_lexema
 
 
 tokens = (
     'IDENTIFICADOR',
+    'CADENA',
     'ENTERO',
     'ASIGNAR',
     'INICIO',

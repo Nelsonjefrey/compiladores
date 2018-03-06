@@ -4,6 +4,7 @@ class archivo():
         global nombree, archivo 
         nombree=nombre
         archivo = open(nombree + ".gh", "rt")
+        print("abriendo ",nombre+".gh...")
 
     def dame_linea(self):
        linea=archivo.readline()

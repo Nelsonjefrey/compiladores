@@ -89,6 +89,3 @@ class Reservadas():
 	t_LLAIZQ = r'{'
 	t_LLADER = r'}'
 	t_COMDOB = r'\"'
-
-
-

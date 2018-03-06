@@ -11,9 +11,41 @@ class Lexer():
 		for x in range(0,a.lineas_archivo()):
 			cadena = a.leer_lineas()
 			lista = cadena.split(" ")
-			cont = cont+1
 			for frase in lista:
-				if re.match(r"amigui",frase):
-					print("coincide ",frase)
-				if re.match(r"estas", frase):
-					print("coincide ",frase)
+				print(frase,cont)
+				cont=+1
+				if re.match(self.diccionary(cont),frase):
+					print ("valido ", frase)
+				
+
+					
+	def S_():
+		return r"S_"
+
+	def SN_():
+		return "ELSE"
+	def P_():
+		return "FOR"
+	def E_():
+		return "WHILE"
+	def L_():
+		return "LEER"
+	def _I():
+		return "INICIO"
+	def _F():
+		return "FIN"
+	def VOID():
+		return "NULL"
+
+	def diccionary(self,argumento):
+		return{
+			1:"P_",
+			2:"E_",
+			3:"L_",
+			4:"S_",
+			5:"S_",
+			6:"*P",
+			7:"*F",
+			8:"VOID"	
+		}.get(argumento, "no valido")
+
